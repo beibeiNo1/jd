@@ -1,0 +1,132 @@
+/**模态框**/
+.modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0,0,0, .7);
+  z-index: 999;
+}
+.modal-dialog {
+  width: 350px;
+  margin: 50px auto 0 auto;
+}
+.modal-content {
+  background:  #fff;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  box-shadow: 0 0 6px #aaa;
+  padding: 20px;
+}
+.alert {
+  border: 1px solid #e4393c;
+  border-radius: 2px;
+  background: #feeadf;
+  color: #e4393c;
+  padding: 6px;
+  margin: 20px 0;
+}
+.modal  form input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border: 1px solid #aaa;
+  border-radius: 2px;
+  padding: 6px;
+  margin-bottom: 12px;
+}
+.modal form .submit {
+  background: #e4393c;
+  color: #fff;
+  outline: none;
+  cursor: pointer;
+}
+.modal form .submit:active {
+  background: #d03030;
+}
+
+/**主体内容**/
+#main {
+  width: 1211px;
+  background: #f7f7f7;
+}
+#main .affix {
+  width: 210px;
+  float: left;
+} 
+.affix h3 {
+  margin: 20px 0 10px 10px;
+  font-size: 1.4em;
+}
+.affix ul li {
+  padding: 10px 0 5px 35px;
+}
+.affix ul li a {
+  text-decoration: none;
+}
+.affix ul li.active a{
+  color: #e4393c;
+  font-weight: bold;
+}
+#main .right {
+  margin-left: 210px;
+  min-height: 500px;
+}
+#main .right > div {
+  display: none;
+  box-sizing: border-box;
+  padding: 10px;
+}
+#main .right > div.active {
+  display: block;
+}
+#order-table {
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background: transparent;
+}
+#order-table thead tr {
+  background: #eaeaea;
+}
+#order-table tbody tr:nth-child(even) {
+  background: #fff;
+}
+#order-table th,
+#order-table td {
+  padding: 0.6em 1em;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+}
+#order-table tbody tr:nth-child(odd) td,
+#order-table tbody tr:nth-child(even) td:first-child {
+  text-align: left;
+}
+
+.pager {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+}
+.pager li {
+  display: inline-block;
+  border: 1px solid #ddd;
+  padding: 15px 22px;
+}
+.pager li.active {
+  border: none;
+}
+.pager li.active a {
+  color: #e4393c;
+  font-weight: bold;
+  cursor: default;
+  text-decoration: none;
+}
+
+
+
+

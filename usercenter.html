@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title> 用户中心 — 京东 </title>
+  <meta charset="utf-8">
+	<link rel="icon" href="img/favicon.ico">
+	<link rel="stylesheet" href="css/common.css">
+	<link rel="stylesheet" href="css/usercenter.css">
+ </head>
+ <body>
+ <div id="header"></div>
+  <!--主体内容-->
+  <div id="main">
+    <div class="affix">
+      <h3>我的京东</h3>
+      <ul>
+        <li><a href="#my-order-container">我的订单</a></li>
+        <li><a href="#buy-stat-container">消费统计(原生版)</a></li>
+        <li><a href="#buy-stat-container-cj">消费统计(Chart.js版)</a></li>
+        <li class="active"><a href="#luck-lottery-container">幸运抽奖</a></li>
+      </ul>
+    </div>
+    <div class="right">
+      <!--我的订单-->
+      <div id="my-order-container">
+        <table id="order-table">
+          <thead>
+            <tr>
+              <th>订单信息</th>
+              <th>收货人</th>
+              <th>订单金额</th>
+              <th>
+                <select id="order-time">
+                  <option value="month3">最近三个月</option>
+                  <option value="month6">最近半年</option>
+                  <option value="month12">最近一年</option>
+                </select>
+              </th>
+              <th>
+                <select id="order-status">
+                  <option value="all">全部</option>
+                  <option value="1">等待付款</option>
+                  <option value="2">等待发货</option>
+                  <option value="3">运输中</option>
+                  <option value="4">订单完成</option>
+                </select>
+              </th>
+              <th>操作</th>
+            </tr>
+          </thead>
+          <tbody>
+          <!--
+            <tr>
+              <td colspan="6">
+                订单编号：237862343
+                <a href="#">京东自营</a>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <a href="#"><img src="img/prod1.jpg" alt=""></a>
+                <a href="#"><img src="img/prod2.jpg" alt=""></a>
+              </td>
+              <td>
+                强东
+              </td>
+              <td>
+                ￥21.90<br>在线支付
+              </td>
+              <td>
+                2016-06-10<br>10:22:35
+              </td>
+              <td>
+                等待收货
+              </td>
+              <td>
+                <a href="#">查看</a><br>
+                <a href="#">确认收货</a><br>
+                <a href="#">取消订单</a>
+              </td>
+            </tr>
+          -->
+          </tbody>
+        </table>
+
+        <!--分页条 -->
+        <ul class="pager">
+          <!--<li><a href="#">上一页</a></li>
+          <li class="active"><a href="#">1</a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li><a href="#">下一页</a></li>-->
+        </ul>
+      </div>
+      <!--消费统计-->
+      <div id="buy-stat-container">
+        <canvas id="canvasBuyStat" width="700" height="500">
+          您的浏览器不支持Canvas标签！
+        </canvas>
+      </div>
+      <!--消费统计-->
+      <div id="buy-stat-container-cj" >
+        <canvas id="canvasBuyStatCJ" width="700" height="500">
+          您的浏览器不支持Canvas标签！
+        </canvas>
+      </div>
+      <!--幸运抽奖-->
+      <div id="luck-lottery-container" class="active">
+        <canvas id="canvasLuckLottery" width="500" height="500">
+          您的浏览器不支持Canvas标签！
+        </canvas>
+        <br>
+        <button id="btLottery">开始抽奖</button>
+      </div>
+    </div>
+  </div>
+ <div id="foot"></div>
+
+ <!--固定定位的模态框——用户登录-->
+ <div class="modal">		<!--半透明遮罩层-->
+	<div class="modal-dialog">		<!--宽度/定位-->
+		<div class="modal-content">  <!--背景色/边框/倒角/阴影-->
+			<h3>用户登录</h3>
+			<div class="alert">
+				<p>请保管好您的注册信息，以防丢失。</p>
+			</div>
+			<form id="login-form">
+				<input type="text" name="uname" placeholder="请输入您的注册名">
+				<input type="password" name="upwd" placeholder="请输入您的密码">
+				<input class="submit" type="button" value="提交注册信息">
+			</form>
+		</div>
+	</div>
+ </div>
+ <script src="js/jquery-1.11.3.js"></script>
+  <script src="js/Chart.js"></script>
+ <script src="js/usercenter.js"></script>
+ </body>
+</html>
